@@ -53,6 +53,7 @@ impl Runner {
 			.args([
 				"search",
 				"nixpkgs",
+				"^", // Nix >= 2.13 refuses to search without a regex; "^" matches all
 				"--json",
 				"--extra-experimental-features",
 				"nix-command",
